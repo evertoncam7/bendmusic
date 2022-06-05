@@ -118,6 +118,87 @@
             position: absolute;
         }
 
+
+        .sidebar{
+            position: fixed;
+            top: 0px;
+            left: 104%;
+            width: 100%;
+            height: 100%;
+            background: #FFFFFF;
+        }
+
+        .header-sideBar{
+            width: 100%;
+            height: 60px;
+            background: #FFFFFF;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 20px;
+        }
+
+        .logo-sideBar{
+            color: #F2A81E;
+            font-weight: bold;
+        }
+
+        .abrirSideBar{
+
+            animation: abrirSideBarAnimation 0.5s;
+            animation-fill-mode: forwards;
+
+            z-index: 100;
+
+        }
+
+        @keyframes abrirSideBarAnimation {
+
+            0%{
+                left:104%;
+            }
+            100%{
+                left:0%;
+            }
+            
+        }
+
+        .fecharSideBar{
+
+            animation: fecharSideBarAnimation 0.5s;
+            animation-fill-mode: forwards;
+
+            z-index: 100;
+
+        }
+
+        @keyframes fecharSideBarAnimation {
+
+            0%{
+                left:0%;
+            }
+            100%{
+                left:104%;
+            }
+
+        }
+
+
+        .icon-chevron-right{
+            margin-top: 6px;
+        }
+
+        .sidebar ul{
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .sidebar ul li{
+            padding: 10px 20px;
+            font-weight: bold;
+        } 
+        
         
 
     </style>
@@ -140,6 +221,26 @@
             <span class="icon-bars"></span>
         </div>
     </header>
+
+    <aside class="sidebar">
+
+        <div class="header-sideBar">
+            <div class="logo-sideBar">
+                Bend Music
+            </div>
+            <span class="icon-chevron-right"></span>
+        </div>
+
+        <ul>
+            <li>CURSOS</li>
+            <li>PLANOS</li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </aside>
+
     <main>
 
         <section>
@@ -164,4 +265,35 @@
         <p>Copyright © <em><strong>Syntax Tech.</strong></em> Todos os direitos reservados.</p>
     </footer>
 </body>
+
+
+<script>
+
+const sidebarb = document.querySelector(".icon-bars");
+const fecharSideBar = document.querySelector(".icon-chevron-right");
+const sidebar = document.querySelector(".sidebar");
+
+sidebarb.addEventListener("click", function(){
+    
+    if(sidebar.classList.contains("fecharSideBar")){
+        sidebar.classList.remove("fecharSideBar");
+        sidebar.classList.add("abrirSideBar");
+    }else{
+        sidebar.classList.add("abrirSideBar");
+    }
+   
+
+});
+
+fecharSideBar.addEventListener("click", function(){
+  
+    if(sidebar.classList.contains("abrirSideBar")){
+        sidebar.classList.remove("abrirSideBar");
+        sidebar.classList.add("fecharSideBar");
+    }
+
+});
+
+</script>
+
 </html>
