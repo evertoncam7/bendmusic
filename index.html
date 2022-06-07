@@ -28,7 +28,7 @@
 
         main{
             width: 100vw;
-            
+            height: 1000px;
          
         }
 
@@ -219,15 +219,23 @@
             margin-right: 10px;
         }
         
-        
+        .horizonte-bx{
+            width: 100%;
+            display: flex;
+            overflow: auto;
+            padding: 0px 5px;
+        }
 
         .card-ist{
-            width: 100%;
+            width: calc(90% - 20px);
             padding: 10px;
             display: flex;
             align-items: center;
             color: #111;
             font-weight: bold;
+            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+            margin: 10px 5px;
+            border-radius: 10px;
         }
 
         .card-ist img{
@@ -291,11 +299,25 @@
 
         </section>
 
-        <section>
+        <section class="horizonte-bx">
 
             <article class="card-ist">
                 <header>
-                    <p>Ukulele virtual para interagir com acordes, escalas e fazer exercícios junto.</p>
+                    <p>Ukulele virtual para interagir com acordes, escalas, padrões e fazer exercícios junto.</p>
+                </header>
+                <img src="assets/storage/background/ingukulele.png" alt="">
+            </article>
+
+            <article class="card-ist">
+                <header>
+                    <p>Violão virtual para interagir com acordes, escalas, padrões e fazer exercícios junto.</p>
+                </header>
+                <img src="assets/storage/background/ingukulele.png" alt="">
+            </article>
+
+            <article class="card-ist">
+                <header>
+                    <p>Baixo virtual para interagir com acordes, escalas, padrões e fazer exercícios junto.</p>
                 </header>
                 <img src="assets/storage/background/ingukulele.png" alt="">
             </article>
