@@ -29,7 +29,7 @@
         main{
             width: 100vw;
             height: 1000px;
-         
+            background: #fafafa;
         }
 
         main section img{
@@ -223,7 +223,7 @@
             width: 100%;
             display: flex;
             overflow: auto;
-            padding: 0px 5px;
+            padding: 20px 5px;
         }
 
         .card-ist{
@@ -233,7 +233,12 @@
             align-items: center;
             color: #111;
             font-weight: bold;
-            box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+
+           
+            background: #fafafa;
+            box-shadow:  6px 6px 12px #d5d5d5,
+             -6px -6px 12px #ffffff;
+           
             margin: 10px 5px;
             border-radius: 10px;
             font-size: 0.9em;
@@ -241,6 +246,28 @@
 
         .card-ist img{
             width: 50%;
+        }
+
+
+
+        .caixa-logo{
+            width:200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%, 20% 40%);
+            background: yellowgreen;
+            
+        }
+
+        .caixa-logo div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.4em;
         }
 
     </style>
@@ -279,6 +306,7 @@
             <li>PLANOS</li>
             <li><a href="http://ukulele.bendmusic.com.br/">UKULELE</a></li>
             <li></li>
+            <li>TERMOS</li>
             <li>FALE CONOSCO</li>
         </ul>
 
@@ -325,6 +353,13 @@
 
 
         </section>
+
+        <!-- <div class="caixa-logo">
+            <div>
+                <span>Bend Music</span>
+                <span>Suporte</span>
+            </div>
+        </div> -->
      
 
      
