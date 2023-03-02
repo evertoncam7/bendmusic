@@ -4,12 +4,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Violão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Imperial+Script&family=Montserrat:wght@300&family=Open+Sans&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../source/icons/styles.css">
+    <link rel="stylesheet" href="../source/css/style.css">
+    <link rel="stylesheet" href="../source/css/tab.css">
+    <title>Document</title>
 </head>
 <body>
+    <header class="header-app">
+        <div class="col-header">
+            <span class="icon-long-arrow-left"></span>
+        </div>
+        <div class="col-header">
+            Bend Music
+        </div>
+        <div class="col-header">
+
+        </div>
+    </header>
+    <main id="id-container" class="container">
+        
+    </main>
+
+    <div class="big-footer">
+
+    </div>
+    <footer>
+   
+
+    </footer>
+
+    <div class="card-anuncios">
+        Anúncio aqui...
+    </div>
+
+    <div class="" id="debug"></div>
     
-    <h1>Violaõ</h1>
-    <p>Esta página é simplesmente de teste.</p>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bd.js"></script>
+    <script src="assets/js/tab.js"></script>
+    <script src="assets/js/get.js"></script>
+    <script src="../source/js/functions.js"></script>
+    <script src="assets/js/inicio.js"></script>
+    <script src="assets/js/component_pages.js"></script>
+    <script src="assets/js/acordes.js"></script>
+    <script src="assets/js/escalas.js"></script>
+    <script src="assets/js/exercicios.js"></script>
+    <script src="assets/js/exer_acorde.js"></script>
+    <script src="assets/js/page_m.js"></script>
+    <script src="assets/js/create_afinacao.js"></script>
+    <script src="assets/js/componentInstruments.js"></script>
+    <script src="assets/js/page_tablatura.js"></script>
+    <script src="assets/js/page_teoria_b.js"></script>
+    <script src="assets/js/page_afinacao.js"></script>
 
 </body>
+
+
+<script>
+   
+    const bxs = document.querySelectorAll(".bx");
+
+    for(let iii = 1; iii <= bxs.length; iii++){
+        document.getElementById("bx-"+iii).scrollLeft = 750;
+    }
+
+    const notass = document.querySelectorAll(".gradeNotasCasa");
+
+    const formatNotas = {
+        casasActive:[],
+        casasInactive:[],
+        stateCasa:"",
+        corda:0,
+        casa:0
+    };
+
+    let countPosition = 1;
+
+    const tabl = [];
+
+    let countClick = 0;
+
+    for (let indexx = 0; indexx < notass.length; indexx++) {
+
+        notass[indexx].addEventListener("click", function(e){
+
+
+            function activeCs(countClicks){
+
+                if(countClicks == 0){
+
+                    if(formatNotas.casasInactive.includes(notass[indexx].dataset.casa)){
+
+                        const positionCasa = formatNotas.casasInactive.indexOf(notass[indexx].dataset.casa);
+                        formatNotas.casasInactive.splice(positionCasa, 1);
+                        console.log(positionCasa);
+
+                    }
+
+                    formatNotas.casasActive.push(notass[indexx].dataset.casa+"-"+countPosition);
+                    formatNotas.stateCasa = notass[indexx].dataset.casa;
+                    notass[indexx].style.background = "green";
+
+                    const n = notass[indexx].dataset.casa.split("-");
+                    formatNotas.corda = parseInt(n[0]);
+                    formatNotas.casa = (20 - n[1]) + 1;
+                    console.log();
+                    countClick = 1;
+                    countPosition++;
+                
+                }else if(countClicks == 1){
+
+
+                    if(formatNotas.casasActive.includes(notass[indexx].dataset.casa)){
+
+                        const positionCasa = formatNotas.casasActive.indexOf(notass[indexx].dataset.casa);
+                        formatNotas.casasActive.splice(positionCasa, 1);
+                        console.log(positionCasa);
+
+                    }
+
+                    formatNotas.casasInactive.push(notass[indexx].dataset.casa);
+                    formatNotas.stateCasa = notass[indexx].dataset.casa;
+                    notass[indexx].style.background = "red";
+                
+                    countClick = 2;
+
+                }else{
+
+                    if(formatNotas.casasActive.includes(notass[indexx].dataset.casa)){
+
+                        const positionCasa = formatNotas.casasActive.indexOf(notass[indexx].dataset.casa);
+                        formatNotas.casasActive.splice(positionCasa, 1);
+
+                    }
+
+                    if(formatNotas.casasInactive.includes(notass[indexx].dataset.casa)){
+
+                        const positionCasa = formatNotas.casasInactive.indexOf(notass[indexx].dataset.casa);
+                        formatNotas.casasInactive.splice(positionCasa, 1);
+
+                    }
+
+                    notass[indexx].style.background = "none";
+
+                    countClick = 0;
+
+                }
+
+            }
+
+            if (formatNotas.stateCasa == e.target.dataset.casa){
+
+                activeCs(countClick);
+                
+            }else{
+
+                countClick = 0;
+                activeCs(countClick);
+                
+            }
+            
+            console.log(formatNotas);
+
+        });
+
+    }
+
+
+    
+</script>
+
+
 </html>
+
+
+
+
