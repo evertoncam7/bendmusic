@@ -29,24 +29,24 @@ const bd = [
         name:"E",
         som:"",
         group:"E",
-        notas:['2-19-B', '3-19-E', '4-20-G#'],
+        notas:[],
         casa:1,
         cordasNull:[],
         dedilhado:[],
         description:"",
-        pos:0
+        pos:417
     },
     {
         id:4, 
         name:"F",
         som:"",
         group:"F",
-        notas:['6-20-F', '5-20-C', '4-20-G#', '3-20-D#', '2-20-A#', '1-20-F', '2-18-C', '3-18-F', '4-19-A'],
+        notas:['1-19-C-1', '2-19-F-2', '3-19-A-3', '4-19-C-4', '5-19-F-5'],
         casa:1,
         cordasNull:[],
         dedilhado:[],
         description:"",
-        pos:0
+        pos:417
     },
     {
         id:5, 
@@ -126,7 +126,7 @@ const bd = [
         name:"G",
         som:"",
         group:"G",
-        notas:['2-19-B', '1-18-G', '6-18-G'],
+        notas:['1-17-D-1', '2-17-G-2', '3-17-B-3', '4-17-D-4', '5-17-G-5'],
         casa:1,
         cordasNull:[],
         dedilhado:[],
@@ -144,8 +144,22 @@ const bd = [
         dedilhado:[],
         description:"",
         pos:705
+    },
+    {
+        id:6, 
+        name:"B",
+        som:"",
+        group:"B",
+        notas:['2-18-F#-1', '3-18-A#-2', '4-18-C#-3', '5-18-F#-4', '1-16-D#-5', '3-17-B-6', '4-16-D#-7'],
+        casa:1,
+        cordasNull:[],
+        dedilhado:[],
+        description:"",
+        pos:705
     }
 ];
+
+// 
 
 const bd_escalas = [
     {

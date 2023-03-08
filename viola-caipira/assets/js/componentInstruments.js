@@ -453,6 +453,16 @@ function componentInstrument(opt){
 
                 bxButton.appendChild(btn_bx_left2);
 
+                const btn_bx_left_afinacao = c("div");
+                btn_bx_left_afinacao.setAttribute("class", "btn_bx_left");
+                btn_bx_left_afinacao.innerHTML = "AFINAÇÃO";
+                btn_bx_left_afinacao.addEventListener("click", function(){
+                    bx_controll2Center.appendChild(comp.create(page_afinacao()));
+                    activeButtom(btn_bx_left_afinacao);
+                });
+
+                bxButton.appendChild(btn_bx_left_afinacao);
+
 
                 const btn_bx_left_inicio = c("div");
                 btn_bx_left_inicio.setAttribute("class", "btn_bx_left");
@@ -487,15 +497,7 @@ function componentInstrument(opt){
 
                 bxButton.appendChild(btn_bx_left_tablatura);
 
-                const btn_bx_left_afinacao = c("div");
-                btn_bx_left_afinacao.setAttribute("class", "btn_bx_left");
-                btn_bx_left_afinacao.innerHTML = "AFINAÇÃO";
-                btn_bx_left_afinacao.addEventListener("click", function(){
-                    bx_controll2Center.appendChild(comp.create(page_afinacao()));
-                    activeButtom(btn_bx_left_afinacao);
-                });
-
-                bxButton.appendChild(btn_bx_left_afinacao);
+                
 
                
 

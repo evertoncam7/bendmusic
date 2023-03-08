@@ -28,7 +28,7 @@
 
         main{
             width: 100%;
-            height: 1000px;
+            /* height: 1000px; */
             background: #f5f5f5;
         }
 
@@ -336,6 +336,14 @@
              color: #fff;
         }
 
+        .b-button{
+            background: #ff2424;
+            box-shadow:  4px 4px 8px #d6d6d6,
+             -4px -4px 8px #f3f3f3;
+             color: #fff;
+             padding-bottom: 13px;
+        }
+
 
         @media(min-width: 500px){
             .horizonte-bx{
@@ -346,6 +354,33 @@
                 width: calc(25% - 20px);
               
             }
+        }
+
+
+        .card-home{
+            width: 100%;
+            height: 400px;
+            display: flex;
+           
+            flex-wrap: wrap;
+        }
+
+        .card-home header{
+            width: 70%;
+            height: 100%;
+        }
+
+        .card-home > div{
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-home > div > img{
+            width:80%;
+            
         }
 
     </style>
@@ -380,21 +415,21 @@
         </div>
 
         <ul>
-           
+<!--            
             <li><a href="file:///C:/Users/evert/Desktop/projetos/git_gitHub/bendmusic/violao/index.html">VIOLÃO</a></li>
             <li><a href="file:///C:/Users/evert/Desktop/projetos/git_gitHub/bendmusic/violao-12-cordas/index.html">VIOLÃO DE 12 CORDAS</a></li>
             <li><a href="file:///C:/Users/evert/Desktop/projetos/git_gitHub/bendmusic/viola-caipira/index.html">VIOLA CAIPIRA</a></li>
             <li><a href="file:///C:/Users/evert/Desktop/projetos/git_gitHub/bendmusic/ukulele/index.html">UKULELE</a></li>
             <li><a href="file:///C:/Users/evert/Desktop/projetos/git_gitHub/bendmusic/contrabaixo/index.html">CONTRABAIXO</a></li>
-            <li><a href="file:///C:/Users/evert/Desktop/projetos/git_gitHub/bendmusic/guitarra-eletrica/index.html">GUITARRA ELÉTRICA</a></li>
+            <li><a href="file:///C:/Users/evert/Desktop/projetos/git_gitHub/bendmusic/guitarra-eletrica/index.html">GUITARRA ELÉTRICA</a></li> -->
             
 
-            <!-- <li><a href="https://bendmusic.com.br/violao/index.html">VIOLÃO</a></li>
+            <li><a href="https://bendmusic.com.br/violao/index.html">VIOLÃO</a></li>
             <li><a href="https://bendmusic.com.br/violao-12-cordas/index.html">VIOLÃO DE 12 CORDAS</a></li>
             <li><a href="https://bendmusic.com.br/viola-caipira/index.html">VIOLA CAIPIRA</a></li>
             <li><a href="https://bendmusic.com.br/ukulele/index.html">UKULELE</a></li>
             <li><a href="https://bendmusic.com.br/contrabaixo/index.html">CONTRABAIXO</a></li>
-            <li><a href="https://bendmusic.com.br/guitarra-eletrica/index.html">GUITARRA ELÉTRICA</a></li> -->
+            <li><a href="https://bendmusic.com.br/guitarra-eletrica/index.html">GUITARRA ELÉTRICA</a></li>
             
             <!-- <li><a href="https://bendmusic.com.br/violao">VIOLÃO</a></li> -->
             
@@ -414,9 +449,58 @@
             </div>
             <header>
                 <h1>Página em desenvolvimento!.</h1>
-                <p>Além dos cursos de alta qualidade você terá acesso à instrumentos virtuais interativos
-                para auxiliar no seu crescimento.</p>
+                <p>A aplicação é um ambiente virtual interativo projetado para fornecer uma experiência de aprendizado imersiva e enriquecedora para estudantes de música de todos os níveis.</p>
+
+                <p>Com uma vasta coleção de instrumentos virtuais de alta qualidade, a aplicação oferece uma ampla gama de recursos para ajudar os usuários a dominar os fundamentos da teoria musical, praticar técnicas de desempenho e aprimorar suas habilidades de composição.</p>
+                
             </header>
+
+        </section>
+
+        <section>
+            <header>
+                <p>O que você deseja aprender?</p>
+                <h1></h1>
+            </header>
+
+            <article class="card-home">
+                <div class="bx-image">
+                    <img src="assets/storage/images/violao01.png" alt="">
+                </div>
+                <header>
+                    <h2>Violão</h2>
+                    <p>A aplicação é uma ferramenta para aqueles que desejam aprender a tocar violão de forma fácil e intuitiva.</p>
+                    <p>Com passo a passo, exercícios práticos e explicativos, os usuários são guiados através dos fundamentos do violão, incluindo a leitura de tablaturas, acordes, dedilhados e escalas.</p>
+
+                    <a href="https://bendmusic.com.br/violao/index.html">
+                        <div class="button-action b-button">
+                            <span class="icon"></span>ENTRAR 
+                        </div>
+                    </a>
+                    
+                </header>
+                
+            </article>
+
+            <article class="card-home">
+                <div class="bx-image">
+                    <img src="assets/storage/images/violao01.png" alt="">
+                </div>
+                <header>
+                    <h2>Viola Caipira</h2>
+
+                    <p>A aplicação é uma ferramenta para aqueles que desejam aprender a tocar viola caipira, um instrumento tradicional brasileiro.</p>
+
+                    <p>Com passo a passo, exercícios práticos, os usuários são guiados através dos fundamentos da viola caipira, incluindo afinação, acordes, dedilhados e escalas.</p>
+
+                    <a href="https://bendmusic.com.br/viola-caipira/index.html">
+                        <div class="button-action b-button">
+                            <span class="icon"></span>ENTRAR 
+                        </div>
+                    </a>
+                </header>
+                
+            </article>
 
         </section>
 
