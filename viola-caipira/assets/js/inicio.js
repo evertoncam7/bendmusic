@@ -13,14 +13,12 @@ function inicio(){
 
     const page = c("page_inicio");
 
-    page.innerHTML = `<h2>História do violão</h2>
-    <p>O violão é um instrumento musical de cordas que existe há milhares de anos. Sua origem é incerta, mas muitos acreditam que ele tenha se originado na Espanha durante o século XV.</p>
+    page.innerHTML = `<h2>História da Viola Caipira</h2>
 
-    <p>No entanto, o instrumento foi modificado e aprimorado ao longo do tempo. Durante o século XIX, o violão passou por diversas mudanças, incluindo a adição de uma sexta corda e o uso de madeiras mais resistentes e duráveis.</p>
-    
-    <p>A popularidade do violão aumentou ao longo do século XX, com o surgimento de grandes músicos como Andrés Segovia, que ajudaram a elevar a reputação do instrumento. A partir daí, o violão se tornou um instrumento amplamente utilizado em diversos gêneros musicais, desde o flamenco e a música clássica até o blues, o jazz e o rock.</p>
-    
-    <p>Hoje em dia, o violão é um dos instrumentos musicais mais populares do mundo, com milhões de pessoas tocando e aprendendo a tocar em todo o mundo. É um instrumento versátil e acessível, que pode ser usado para criar uma variedade de sons e estilos musicais.</p>
+    <p>A viola caipira é um instrumento musical de cordas popular no Brasil, especialmente nas regiões do interior do país. Acredita-se que sua origem remonta aos instrumentos de cordas trazidos pelos colonizadores portugueses durante o período colonial.</p>
+    <p>Ao longo do tempo, a viola caipira foi se desenvolvendo e se adaptando às características musicais e culturais do Brasil. No século XIX, o instrumento já era bastante popular entre os trabalhadores rurais e era utilizado em diversas ocasiões, como festas, bailes e celebrações religiosas.</p>
+    <p>A partir do início do século XX, a viola caipira passou a ser incorporada à música sertaneja, gênero musical que se consolidou nas décadas seguintes. Com o tempo, surgiram diversos estilos de música regional que utilizam a viola caipira como instrumento principal, como o cururu, o catira, a moda de viola e o rasqueado.</p>
+    <p>Apesar de ter enfrentado momentos de ostracismo em algumas épocas, a viola caipira nunca perdeu sua importância cultural e, nas últimas décadas, tem experimentado uma nova fase de popularidade e valorização, com a emergência de novos músicos e grupos que se dedicam a explorar a riqueza musical do instrumento e de suas tradições.</p>
     `;
 
     

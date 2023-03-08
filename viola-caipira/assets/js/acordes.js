@@ -7,7 +7,7 @@ let state = {
     buttonNotas:""
 };
 
-function fn_acordes(comp, q_cordas, afinacao){
+function fn_acordes(comp, q_cordas, afinacao, q_casa){
 
     state.search[0] = '';
     state.search[1] = '';
@@ -113,10 +113,13 @@ function fn_acordes(comp, q_cordas, afinacao){
                         
                         const split = v.split("-");
                         const cor = parseInt(split[0]);
-                        const cas = (20 - parseInt(split[1]) + 1);
+
+                        // A quantidade de casa tem que ser relativo ao instrumento me questão.
+                        
+                        const cas = (q_casa - parseInt(split[1])+1);
                         const tex = cas;
                       
-                        bdt.push({corda:(cor - 1), casa:cas, text:tex, pos:2, index:i});
+                        bdt.push({corda:(cor), casa:cas, text:tex, pos:2, index:i});
 
                     });
 

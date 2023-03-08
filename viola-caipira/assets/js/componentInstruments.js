@@ -432,9 +432,31 @@ function componentInstrument(opt){
             const bxButton = c("nav");
             bxButton.setAttribute("class", "bxButton");
 
+
+                const btn_bx_left = c("div");
+                btn_bx_left.setAttribute("class", "btn_bx_left");
+                btn_bx_left.innerHTML = "ACORDES";
+                btn_bx_left.addEventListener("click", function(){
+                    bx_controll2Center.appendChild(comp.create(fn_acordes(gradeNotas, init.cordas, init.afinacao, init.casas)));
+                    activeButtom(btn_bx_left);
+                });
+
+                bxButton.appendChild(btn_bx_left);
+
+                const btn_bx_left2 = c("div");
+                btn_bx_left2.setAttribute("class", "btn_bx_left");
+                btn_bx_left2.innerHTML = "ESCALAS";
+                btn_bx_left2.addEventListener("click", function(){
+                    bx_controll2Center.appendChild(comp.create(page_escalas(gradeNotas, init.cordas, init.afinacao, init.casas)));
+                    activeButtom(btn_bx_left2);
+                });
+
+                bxButton.appendChild(btn_bx_left2);
+
+
                 const btn_bx_left_inicio = c("div");
                 btn_bx_left_inicio.setAttribute("class", "btn_bx_left");
-                btn_bx_left_inicio.innerHTML = "INÍCIO";
+                btn_bx_left_inicio.innerHTML = "HISTÓRIA";
                 btn_bx_left_inicio.addEventListener("click", function(){
                     bx_controll2Center.appendChild(comp.create(inicio()));
                     activeButtom(btn_bx_left_inicio);
@@ -475,25 +497,7 @@ function componentInstrument(opt){
 
                 bxButton.appendChild(btn_bx_left_afinacao);
 
-                const btn_bx_left = c("div");
-                btn_bx_left.setAttribute("class", "btn_bx_left");
-                btn_bx_left.innerHTML = "ACORDES";
-                btn_bx_left.addEventListener("click", function(){
-                    bx_controll2Center.appendChild(comp.create(fn_acordes(gradeNotas, init.cordas, init.afinacao, init.casas)));
-                    activeButtom(btn_bx_left);
-                });
-
-                bxButton.appendChild(btn_bx_left);
-
-                const btn_bx_left2 = c("div");
-                btn_bx_left2.setAttribute("class", "btn_bx_left");
-                btn_bx_left2.innerHTML = "ESCALAS";
-                btn_bx_left2.addEventListener("click", function(){
-                    bx_controll2Center.appendChild(comp.create(page_escalas(gradeNotas, init.cordas, init.afinacao, init.casas)));
-                    activeButtom(btn_bx_left2);
-                });
-
-                bxButton.appendChild(btn_bx_left2);
+               
 
                 // const btn_bx_left3 = c("div");
                 // btn_bx_left3.setAttribute("class", "btn_bx_left");
@@ -545,13 +549,12 @@ function componentInstrument(opt){
             bx_controll2Center.setAttribute("class", "bx_controll2Center");
 
 
-
-            
-
         bx_controll2.appendChild(bx_controll2Center);
 
-        bx_controll2Center.appendChild(comp.create(inicio()));
-        activeButtom(btn_bx_left_inicio);
+
+        // Aqui faz a inicialização
+        bx_controll2Center.appendChild(comp.create(fn_acordes(gradeNotas, init.cordas, init.afinacao, init.casas)));
+        activeButtom(btn_bx_left);
 
 
 
@@ -639,20 +642,13 @@ function componentInstrument(opt){
 
 }
 
-
-
-
 const container = document.getElementById("id-container");
-
-
-
 
 const opt3 = {
     instrument:"Viola"
 }
+
 const ct3 = componentInstrument(opt3);
-
-
 
 container.appendChild(ct3.create());
 
